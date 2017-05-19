@@ -1,0 +1,47 @@
+Gregory Haynes
+CSC 451 Section 107
+Assignment 5
+November 1, 2016
+
+
+Table ENROLLMENT dropped.
+
+
+Table SECTION dropped.
+
+Table SECTION created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Table ENROLLMENT created.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+SECTI COURSENAME                     COURSEN SECTIONNUMBER INSTRUCTORNAME     
+----- ------------------------------ ------- ------------- --------------------
+701   CSC451                         CSC451            444 Eric Schwabe        
+810   HCI440                         HCI440            210 Danyell Jones       
+901   HCI451                         HCI451            821 Adam Steele         
+
+
+STUDENT FIRSTNAME                      LASTNAME                       SECTI
+------- ------------------------------ ------------------------------ -----
+1044108 Gregory                        Haynes                         701  
+1223423 Eric                           Benson                         810  
+1533422 Terrell                        Tomlin                         901  
+

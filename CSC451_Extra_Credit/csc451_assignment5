@@ -1,0 +1,60 @@
+-- remove any existing table
+
+DROP TABLE SECTION;   
+
+
+
+
+
+-- Create the table
+CREATE TABLE SECTION
+(
+
+SectionID            VARCHAR(5),
+CourseName           VARCHAR(30), 
+CourseNumber         VARCHAR(7), 
+SectionNumber        NUMBER(3), 
+InstructorName       VARCHAR(20)
+
+					CONSTRAINT PK_SECTION
+						PRIMARY KEY(SectionID)
+);
+
+INSERT INTO SECTION VALUES ('710', 'Database Design', 'CSC451', 701, 'Eric Schwabe');
+
+INSERT INTO SECTION VALUES ('751', 'Introduction to User-Centered Design', 'HCI440', 810, 'Danyell Jones');
+
+INSERT INTO SECTION VALUES ('723', 'Prototyping and Implementation', 'HCI440', 801, 'Adam Steele');
+
+-- remove any existing table
+DROP TABLE ENROLLMENT;
+
+
+
+
+-- Create the table
+CREATE TABLE ENROLLMENT
+(
+StudentID          VARCHAR(7), 
+FirstName          VARCHAR(20), 
+LastName           VARCHAR(20), 
+SectionID          VARCHAR(5)
+
+					CONSTRAINT PK_SECTION
+						PRIMARY KEY(StudentID, SectionID),
+					CONSTRAINT FK_ENROLLMENT_ZIPCODE
+						FOREIGN KEY (SectionID)
+						REFERENCES SECTION(SectionID)
+
+);
+
+
+INSERT INTO ENROLLMENT VALUES ('1044108', 'Gregory', 'Haynes', 701);
+
+INSERT INTO ENROLLMENT VALUES ('1022159', 'Billy', ' Madison', 810);
+
+INSERT INTO ENROLLMENT VALUES ('1788147', 'Johnathan', 'Marsden', 801);
+
+SELECT * FROM SECTION; 
+
+SELECT * FROM ENROLLMENT;
